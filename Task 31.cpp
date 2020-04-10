@@ -28,14 +28,14 @@ std::string maze[25] = {
 "#######E############D######"
 };
 
-int f=0;
+bool f=0;
 
 void w(int y,int x){
      if((x>=27)||(y>=25)||(x<0)||(y<0)||(maze[y][x]=='#')) return;
      else{
         if(maze[y][x] != ' '){
          std::cout<<maze[y][x];
-         f=1;
+         f=true;
      }
      maze[y][x]='#';
      w(y+1,x);
